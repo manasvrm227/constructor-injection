@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+
+<!-- <bean id="addressBean" class="com.shrinkme.bean.AddressBean">  
+<constructor-arg name="city" value="SAS Nagar" type="String"></constructor-arg>
+<constructor-arg name="state" value="Punjab" type="String"></constructor-arg>
+</bean> -->
+
+<bean id="addressBean1" class="com.shrinkme.bean.AddressBean">  
+<constructor-arg name="city" value="SAS Nagar" type="String"></constructor-arg>
+<constructor-arg name="state" value="Punjab" type="String"></constructor-arg>
+</bean>
+
+<bean id="addressBean2" class="com.shrinkme.bean.AddressBean">  
+<constructor-arg name="city" value="Ludihana" type="String"></constructor-arg>
+<constructor-arg name="state" value="Punjab" type="String"></constructor-arg>
+</bean>
+
+               
+<bean id="employeeBean" class="com.shrinkme.bean.EmployeeBean">  
+<constructor-arg name="id" value="1" type="int"></constructor-arg>
+<constructor-arg name="name" value="Mann" type="String"></constructor-arg>
+<constructor-arg name="addressBean">
+<list>
+<ref bean="addressBean1"/>
+<ref bean="addressBean2"/>
+</list>
+</constructor-arg>
+</bean>                
+               
+</beans>
