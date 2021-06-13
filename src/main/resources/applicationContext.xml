@@ -24,9 +24,9 @@
 
                
 <bean id="employeeBean" class="com.shrinkme.bean.EmployeeBean">  
-<constructor-arg name="id" value="1" type="int"></constructor-arg>
-<constructor-arg name="name" value="Mann" type="String"></constructor-arg>
-<constructor-arg name="addressBean">
+<constructor-arg index="0" value="1" type="int"></constructor-arg>
+<constructor-arg index="1" value="Mann" type="String"></constructor-arg>
+<constructor-arg index="2">
 <list>
 <ref bean="addressBean1"/>
 <ref bean="addressBean2"/>
